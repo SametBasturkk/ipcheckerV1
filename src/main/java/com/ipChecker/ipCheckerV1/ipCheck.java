@@ -26,6 +26,7 @@ public class ipCheck {
     if (clientIP == null || clientIP.isEmpty() || "unknown".equalsIgnoreCase(clientIP)) {
       clientIP = requestAttributes.getRequest().getRemoteAddr();
     }
+    //localcheck fix
     if (clientIP == "0:0:0:0:0:0:0:1") {
       clientIP = "127.0.0.1";
     }

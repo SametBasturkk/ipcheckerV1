@@ -11,17 +11,16 @@ public class ipDbReader {
     private static final int INITIAL_CAPACITY = 10000; // Adjust the value based on your data size
     public static List ipDb = new ArrayList<>(INITIAL_CAPACITY);
 
-    public ipDbReader() {
-        System.out.println("IpDbReader is running");
-    }
 
     public void readerDB(String dbPath) throws IOException {
+        System.out.println("IpDbReader is running");
         try (BufferedReader br = new BufferedReader(new FileReader(dbPath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 List<String> values = parseCSVLine(line);
                 ipDb.add(values);
             }
+            System.out.println("IpDbReader is finished");
         }
     }
 
