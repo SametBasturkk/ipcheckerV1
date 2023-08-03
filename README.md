@@ -1,2 +1,2 @@
 # ipcheckerV1
-ipChecker SPRING BOOT
+ipChecker SPRING BOOT Dockerized
