@@ -19,9 +19,9 @@ public class webService {
   }
 
   @RestController
-  public class IPCheckController {
+  public static class IPCheckController {
 
-    @GetMapping("/ipcheck")
+    @GetMapping("/")
     public String ipCheck(@RequestParam(value = "ip", defaultValue = "") String ip)
         throws IOException {
       Date date = new Date();
